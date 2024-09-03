@@ -114,6 +114,7 @@
     "minimist": "^1.2.8",
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.1",
+    "morgan": "^1.10.0",
     "ms": "^2.1.2",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.10.2",
@@ -199,8 +200,6 @@
     "start": "set NODE_ENV=production&& set MONGO_USER=Abope&& set MONGO_PASSWORD=12191996Abope.&& set MONGO_DEFAULT_DATABASE=shop&& set STRIPE_KEY=sk_test_51PoDfmP0g3APmExRGk4E0nGqnv0FLeBOIkTHvcXGfo3UUmOPsrlWdB0K429Q4yJfP9r3nxneAXX9Q1ZCjJ28TFZ100LvrK6VIP && set node games.js",
     "start-server": "nodemon games.js",
     "start:dev": "nodemon games.js"
-  
-    
   },
   "author": "",
   "license": "ISC"
