@@ -1,0 +1,27 @@
+/* TARGETING ELEMENTS / TAGS */
+p{
+    font-size: 30px;
+    color: blue;
+}
+a {
+    text-decoration: underline;
+}
+h1{
+    font-size: 50px;
+    color: blue;
+text-align: center}
+h2{
+    font-size: 32px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+}
+.deck{
+    text-transform: uppercase;
+    color: red;
+    display: block;
+}
+div{
+    width: 100%;
+    background-color: pink;
+}

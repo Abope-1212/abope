@@ -1,0 +1,31 @@
+.wale{
+    font-size: 50px;
+    color: black;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+fieldset{
+    text-transform: uppercase;
+    background-color: blue;
+    width: 300px;
+    border-radius: 10px;
+    justify-content: center;
+
+
+
+
+}
+
+body{
+    background-image: url("/node.js/company/images/mymy11.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    backface-visibility: hidden;
+    background-position-x: center;
+    display: inline-block;
+    align-items: inline-block;
+
+}

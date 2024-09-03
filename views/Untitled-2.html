@@ -1,0 +1,33 @@
+%-include('includes/head.ejs')%>
+
+
+  <%-include('includes/navigation.ejs')%>
+  <main>
+    <% if (prods.length>0) { %>
+    <div class="grid">
+      <% for (let name of Username) { %>
+      <article class="card product-item">
+        <header class="card__header">
+          <h1 class="product title"><%=Username.title%></h1>
+        </header>
+        <div class="card__image">
+          <img src="/node.js/company/images/my my1.png" alt="" />
+        </div>
+        <div class="card__content">
+          <h2 class="product__price">$19.99</h2>
+          <p class="product__description">
+            A very interesting book about so many even more things!
+          </p>
+        </div>
+        <div>
+          <button>Add to cart</button>
+        </div>
+      </article>
+      <% } %>
+    </div>
+    <% } else {%>
+    <h1>No product found</h1>
+    <% } %>
+  </main>
+  <%-include('includes/end.ejs')%>
+</body>

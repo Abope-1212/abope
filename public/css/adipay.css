@@ -1,0 +1,41 @@
+.wale{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0px;
+}
+select{
+    color: blue;
+    background-color: lightblue;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+body{
+    background-image: url("/node.js/company/images/mymy10.png");
+    background-repeat: no-repeat;
+    background-position: contain;
+    background-size: cover;
+    background-attachment:scroll;
+}
+textarea{
+    word-break: break-all;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+li{
+    font-size: larger;
+    text-transform: uppercase;
+}
+fieldset{
+    border-radius: 10px;
+    width: 500px;
+    border-radius: 10px;
+}
+label{
+    display: inline;
+}
+input{
+    border-radius: 5px;
+}
