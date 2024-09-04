@@ -134,7 +134,7 @@ exports.postEditProduct = (req, res, next) => {
     return res.status(422).render("admin/edit-product", {
       pageTitle: "Edit Product",
       path: "/edit-product",
-      editing: t,
+      editing: true,
       hasError: true,
       product: {
         title: updatedtitle,
