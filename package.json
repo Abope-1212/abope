@@ -193,10 +193,12 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "set NODE_ENV=production&& set MONGO_USER=Abope&& set MONGO_PASSWORD=12191996Abope.&& set MONGO_DEFAULT_DATABASE=shop&& set STRIPE_KEY=sk_test_51PoDfmP0g3APmExRGk4E0nGqnv0FLeBOIkTHvcXGfo3UUmOPsrlWdB0K429Q4yJfP9r3nxneAXX9Q1ZCjJ28TFZ100LvrK6VIP&& set node games.js",
     "start-server": "nodemon games.js",
     "start:dev": "nodemon games.js"
