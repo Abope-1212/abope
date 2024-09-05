@@ -14,14 +14,14 @@
           </header>
          
           <div class="card_image">
-           <img src="/<%= product.imageUrl %>" alt="">
+           <img src="/<%= product.imageUrl %>" alt="" class="image">
           </div>
           <div class="card__content">
            <h2 class="product__price">$<%=product.price%></h2>
            <h3 class="product__Description"><%=product.Description%></h3>
           </div>
           <div class="button">
-            <a href="/products/<%=product._id%>"class="btn" type="submit"><button id="btn">Details</button></a>
+            <a href="/products/<%=product._id%>" type="submit"><button class="btn" >Details</button></a>
            <%-include('../includes/add-to-cart.ejs',{product: product})%>
          
           </div>
