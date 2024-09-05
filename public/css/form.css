@@ -87,7 +87,7 @@
 .form-control label,
 .form-control input,
 .form-control textarea {
-  display: block;
+  /* display: block; */
   width: 100%;
   margin-bottom: 0.25rem;
 }
