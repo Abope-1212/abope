@@ -359,7 +359,7 @@ form {
 .card_image{
   width: 100%;
   height: 15vw;
-  object-fit: auto; 
+  object-fit: contain; 
 } 
 
 .card__actions {
@@ -373,7 +373,7 @@ form {
   align-content: center;
 }
 
-#btn {
+.btn {
   
   border: none;
    outline: 0;

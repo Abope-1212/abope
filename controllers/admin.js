@@ -3,7 +3,6 @@ const fileHelper = require("../util/file");
 
 const Product = require("../models/product");
 const { validationResult } = require("express-validator/lib");
-const { redirect } = require("statuses");
 
 // const ObjectId = mongodb.ObjectId;
 
@@ -129,22 +128,6 @@ exports.postEditProduct = (req, res, next) => {
   const updatedprice = req.body.price;
   const image = req.file;
   const updatedDescription = req.body.Description;
-
-  if (!image) {
-    return res.status(422).render("admin/edit-product", {
-      pageTitle: "Edit Product",
-      path: "/edit-product",
-      editing: true,
-      hasError: true,
-      product: {
-        title: updatedtitle,
-        price: updatedprice,
-        Description: updatedDescription,
-      },
-      errorMessage: "Attached file is not an image",
-      validationErrors: [],
-    });
-  }
 
   const errors = validationResult(req);
 
