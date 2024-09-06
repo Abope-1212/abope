@@ -1,53 +1,43 @@
-<%-include('../includes/head.ejs')%>
-
-
-  <%-include('../includes/navigation.ejs')%>
-  <main>
-    <% if (prods.length>0) { %>
-    <div class="grid">
-      <% for (let product of prods) { %>
-      <article class="card product-item">
-    
+<%-include('../includes/head.ejs')%> <%-include('../includes/navigation.ejs')%>
+<main>
+  <% if (prods.length>0) { %>
+  <div class="grid">
+    <% for (let product of prods) { %>
+    <article class="card product-item">
       <div card="card">
         <div>
           <header class="card__header">
             <h1 class="product title"><b><%=product.title%></b></h1>
           </header>
         </div>
-        
+
         <div class="card_image">
-          <img src="/<%= product.imageUrl %>" alt="">
+          <img src="/<%= product.imageUrl %>" alt="" />
         </div>
         <div class="card__content">
           <h2 class="product__price"><b>$<%=product.price%></b></h2>
           <h3 class="product__Description"><b><%=product.Description%></b></h3>
         </div>
 
-       
-          <a  href="/edit-product/<%=product._id%>?edit=true">
-           <button class="btn">Edit</button>
-          <a>
-        <div class="button">
-        
-           
-            <input type="hidden" value="<%= product._id %>" name="productId">
-            <button class="btn" type="button" onclick= "deleteProduct(this)">Delete</button>
-         
+        <div class="card__action">
+          <a href="/edit-product/<%=product._id%>?edit=true">
+            <button class="btn">Edit</button>
+          </a>
+
+          <input type="hidden" value="<%= product._id %>" name="productId" />
+          <button class="btn" type="button" onclick="deleteProduct(this)">
+            Delete
+          </button>
         </div>
       </div>
-
-      </article>
-      <% } %>
-    
-    </div>
-    
-    <% } else {%>
-    <h1>No product found</h1>
+    </article>
     <% } %>
-  </main>
+  </div>
+
+  <% } else {%>
+  <h1>No product found</h1>
+  <% } %>
+</main>
 
 <%-include('../includes/end.ejs')%>
 <script src="/js/admin.js"></script>
-          
-        
-         
