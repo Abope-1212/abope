@@ -20,3 +20,11 @@ const deleteProduct = (btn) => {
       console.log(err);
     });
 };
+document.addEventListener('DOMContentLoaded', function() {
+  const deleteProduct  = document.getElementById('myButton');
+  button.addEventListener('click', handleClick);
+});
+
+function handleClick() {
+  alert('Button clicked!');
+}
