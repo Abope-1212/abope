@@ -28,7 +28,7 @@
 // function handleClick() {
 //   alert('Button clicked!');
 // }
-document.querySelectorAll(".delete-btn").forEach((btn) => {
+document.querySelectorAll("btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const prodId = this.getAttribute("data-product-id");
     deleteProduct(prodId);
@@ -36,7 +36,7 @@ document.querySelectorAll(".delete-btn").forEach((btn) => {
 });
 
 function deleteProduct(prodId) {
-  fetch("/product/" + prodId, {
+  fetch("/admin-products/" + prodId, {
     method: "DELETE",
   })
     .then((response) => response.json())
