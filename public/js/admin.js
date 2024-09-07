@@ -28,7 +28,7 @@
 // function handleClick() {
 //   alert('Button clicked!');
 // }
-document.querySelectorAll("btn").forEach((btn) => {
+document.querySelectorAll(".delete-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const prodId = this.getAttribute("data-product-id");
     deleteProduct(prodId);
