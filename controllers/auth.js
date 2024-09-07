@@ -222,7 +222,7 @@ exports.postReset = (req, res, next) => {
           subject: "Password Reset",
           html: `
              <P> You requested a password reset </p>
-             <p> Click this <a href="https://dove-oye-ddc9c39912db.herokuapp.com/${token}"> link to set a new password </p>'
+             <p> Click this <a href="https://dove-oye-ddc9c39912db.herokuapp.com/reset/${token}"> link to set a new password </p>'
             `,
         };
         transporter.sendMail(mailOptions, (err, info) => {
