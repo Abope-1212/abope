@@ -39,10 +39,23 @@ function deleteProduct(prodId) {
   fetch("/admin-products/" + prodId, {
     method: "DELETE",
   })
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to delete the product!");
+      }
+      // Ensure that the content-type is JSON before parsing
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        return response.json();
+      } else {
+        throw new Error("Response is not in JSON format");
+      }
+    })
     .then((data) => {
       console.log(data);
-      // Remove the product from the DOM
+      productElement.parentNode.removeChild(productElement);
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err.message); // Improved error logging
+    });
 }
