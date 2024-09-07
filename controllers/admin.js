@@ -158,7 +158,12 @@ exports.postEditProduct = (req, res, next) => {
       product.price = updatedprice;
       product.Description = updatedDescription;
       if (image) {
-        fileHelper.deleteFile(product.imageUrl);
+        fileHelper.deleteFile(product.imageUrl, (err) => {
+          if (err) {
+            console.error("Error deleting file:", err);
+            // Optionally, you can set a flash message or handle the error accordingly
+          }
+        });
         product.imageUrl = image.path;
       }
       return product.save().then((result) => {

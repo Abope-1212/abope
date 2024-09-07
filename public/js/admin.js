@@ -36,7 +36,7 @@ document.querySelectorAll(".delete-btn").forEach((btn) => {
 });
 
 function deleteProduct(prodId) {
-  fetch(`/product/${prodId}`, {
+  fetch("/product/" + prodId, {
     method: "DELETE",
   })
     .then((response) => response.json())
