@@ -24,7 +24,7 @@ exports.postAddproduct = (req, res, next) => {
   const title = req.body.title;
   const price = req.body.price;
   const image = req.file;
-  // const Description = req.body.Description;
+  const Description = req.body.Description;
   if (!image) {
     return res.status(422).render("admin/edit-product", {
       pageTitle: "Add Product",
